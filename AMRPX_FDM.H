@@ -2,7 +2,7 @@
 #define AMRPX_FDM_H
 
 #include "AMRPX.H"
-#include "AMReX.H"
+#include <AMReX.H>
 
 class FDMSolver : public PDESolver {
 
