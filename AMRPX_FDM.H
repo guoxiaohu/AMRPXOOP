@@ -1,6 +1,12 @@
+#ifndef AMRPX_FDM_H
+#define AMRPX_FDM_H
+
 #include "AMRPX.H"
+#include "AMReX.H"
 
 class FDMSolver : public PDESolver {
+
+
 public:
     void solve() override {
         // Implement FDM-specific solving logic
@@ -14,23 +20,17 @@ public:
     void writeOutput() override {
         // Implement FDM-specific output writing
     }
-};
 
-// Add more solver classes for other methods as needed
-class FDMSolver : public PDESolver {
-private:
-    amrex::Vector<amrex::MultiFab> mf_grid;
-    // Other FDM-specific data members...
-
-public:
     FDMSolver(int nlevel, int ref_ratio) {
         // Initialize FDM-specific data members and grid information
     }
 
-    // Implement FDM-specific methods...
+private:
+    amrex::Vector<amrex::MultiFab> mf_grid;
+    // Other FDM-specific data members...
+
 };
 
 // Add constructors and data members as needed for other solver classes
 
-
-
+#endif

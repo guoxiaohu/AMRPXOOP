@@ -1,0 +1,6 @@
+CEXE_sources += main.cpp 
+CEXE_headers += AMRPX.H
+
+CEXE_headers += AMRPX_FEM.H
+CEXE_headers += AMRPX_FDM.H
+CEXE_headers += AMRPX_SolverFactory.H
